@@ -21,9 +21,16 @@ public class Calculator {
 	private int calSum(String[] numbers) {
 		int sum = 0;
 		for (int i = 0; i < numbers.length; i++) {
-			sum += stringToInt(numbers[i]);
+			sum += isMinus(stringToInt(numbers[i]));
 		}
 		return sum;
+	}
+
+	public Integer isMinus(int input) {
+		if (input < 0) {
+			throw new RuntimeException();
+		}
+		return input;
 	}
 
 	private boolean isEmptyOrNull(String input) {
