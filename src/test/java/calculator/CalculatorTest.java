@@ -16,4 +16,9 @@ class CalculatorTest {
 		assertThat(Calculator.splitAndSum(null)).isEqualTo(0);
 	}
 	
+	@Test
+	void 숫자_하나를_문자열로_입력할_때_숫자를_반환() {
+		Calculator calculator = new Calculator();
+		assertThat(calculator.stringToInt("3")).isEqualTo(3);
+	}
 }
