@@ -10,15 +10,26 @@ import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
 	
+	Calculator calculator;
+	
+	@BeforeEach
+	void setUp() {
+		calculator = new Calculator();
+	}
 	@Test
 	void 빈_문자열_널값처리() {
-		assertThat(Calculator.splitAndSum(" ")).isEqualTo(0);
-		assertThat(Calculator.splitAndSum(null)).isEqualTo(0);
+		assertThat(calculator.splitAndSum("")).isEqualTo(0);
+		assertThat(calculator.splitAndSum(null)).isEqualTo(0);
 	}
 	
 	@Test
-	void 숫자_하나를_문자열로_입력할_때_숫자를_반환() {
+	void 숫자_하나를_문자열로_입력할_때_숫자로_변환() {
 		Calculator calculator = new Calculator();
 		assertThat(calculator.stringToInt("3")).isEqualTo(3);
+	}
+	
+	@Test
+	void 숫자를_구분자로_입력한_경우_합을_반환() {
+		assertThat(calculator.splitAndSum("1,2,3")).isEqualTo(6);
 	}
 }
