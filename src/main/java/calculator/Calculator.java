@@ -1,13 +1,21 @@
 package calculator;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Calculator {
 
 	public Integer splitAndSum(String input) {
 		if (isEmptyOrNull(input)) {
 			return 0;
 		}
-		String[] numbers = input.split(",");
-		return calSum(numbers);
+		Matcher m = Pattern.compile("//(.)\n(.*)").matcher(input);
+		if (m.find()) {
+		    String customDelimiter = m.group(1);
+		    String[] tokens= m.group(2).split(customDelimiter);
+		    return calSum(tokens);
+		}
+		return calSum(input.split(",|:"));
 	}
 
 	private int calSum(String[] numbers) {
