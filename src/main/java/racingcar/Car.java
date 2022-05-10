@@ -7,6 +7,13 @@ public class Car {
     private String name;
     private int position;
 
+    public Car() {
+    }
+
+    public Car(String name) {
+        this.name = name;
+    }
+
     public void setName(String name) {
         validName(name);
         this.name = name;

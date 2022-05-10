@@ -9,6 +9,17 @@ public class Race {
 
     private List<Car> cars;
 
+    public Race() {
+    }
+
+    public Race(List<Car> cars) {
+        this.cars = cars;
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
     public void setCars(List<Car> cars) {
         this.cars = cars;
     }
