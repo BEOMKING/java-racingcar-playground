@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Car {
 
     public static final int VALID_LENGTH = 5;
