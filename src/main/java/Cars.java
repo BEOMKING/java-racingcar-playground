@@ -9,6 +9,10 @@ public class Cars {
         this.cars = cars;
     }
 
+    public List<Car> getCars() {
+        return cars;
+    }
+
     public void race() {
         for (Car car : cars) {
             car.move(random());

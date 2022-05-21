@@ -15,4 +15,7 @@ public class RacingGame {
         return cars.winners();
     }
 
+    public Cars getCars() {
+        return cars;
+    }
 }
