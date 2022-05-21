@@ -9,4 +9,7 @@ public class Position {
         return position;
     }
 
+    public int getPosition() {
+        return position;
+    }
 }
