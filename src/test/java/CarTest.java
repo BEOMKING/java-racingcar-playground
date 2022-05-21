@@ -20,6 +20,13 @@ public class CarTest {
                 () -> new Car("kawai lenerd"));
     }
 
+    @Test
+    public void 입력_받은_수가_4이상일_때_움직인다() {
+        Car car = new Car("BJP");
+        assertEquals(1, car.move(4));
+        assertEquals(1, car.move(3));
+    }
+
 //    @Test
 //    @DisplayName("입력 받은 수가 4이상일 때 움직인다.")
 //    public void carMoveInputBiggerThan() {

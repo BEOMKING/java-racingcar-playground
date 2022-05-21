@@ -1,9 +1,8 @@
-
 public class Name {
 	
 	private static final int VALID_MAX_LENGTH = 5;
 	
-	private String name;
+	private final String name;
 
 	public Name(String name) {
 		valid(name);
