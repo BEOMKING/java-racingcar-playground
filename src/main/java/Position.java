@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Position {
+public class Position implements Comparable<Position> {
     public static final int FORWARD_CONDITION = 4;
     private final int position;
 
@@ -26,6 +26,11 @@ public class Position {
     @Override
     public int hashCode() {
         return Objects.hash(position);
+    }
+
+    @Override
+    public int compareTo(Position o) {
+        return position - o.position;
     }
 
 }

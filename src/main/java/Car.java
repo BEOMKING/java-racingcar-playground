@@ -31,4 +31,15 @@ public class Car {
         return Objects.hash(name, position);
     }
 
+    public Position compareAndreturnBig(Position max) {
+        if (position.compareTo(max) > 0) {
+            return position;
+        }
+        return max;
+    }
+
+    public boolean isSame(Position position) {
+        return this.position.equals(position);
+    }
+
 }
